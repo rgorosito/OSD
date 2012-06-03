@@ -1,0 +1,47 @@
+Note that edge rows/cols are not used as they are hidded on most displays.
+
+                PAL (30x16)
+   012345678901234567890123456789
+   ------------------------------
+ 0|..............................
+ 1|.#1.1m#1.5m  o210       04:12. // altitude | compass | timer
+ 2|.#10.1V 15A 3000m      AeroQD. // battery info[1] | callsign
+ 3|.      a  a a    a a  a #100%. // (bat2) | (AI) | RSSI
+ 4|.      a  a a    a a  a
+ 5|.      a  a a    a a  a
+ 6|.      a  a a    a a  a
+ 7|.      a  a a rr a a  a        // (AI) | reticle | (AI)
+ 8|.      a  a a @@ a a  a        // (AI) | wpt arrow | (AI)
+ 9|.      a  a a123ma a  a        // (AI) | dist to wpt | (AI)
+10|.      a  a aL90 a a  a
+11|.      a  a a    a a  a
+12|.
+13|.mmmmmmmmmmmmmmmmmmmmmmmmmmmm. // line used by menu
+14|.N60.12345 E024.12345     15k. // GPS coords and speed
+15|..............................
+
+NOTE: AI collides with second battery if current sensor used.
+
+                NTSC (30x13)
+   012345678901234567890123456789
+   ------------------------------
+ 0|..............................
+ 1|..#1.1m#1.5m o210°     #04:12. // altitude | compass | timer 
+ 2|..#10.1Va a a    a a a         // (bat1V| (AI) | 
+ 3|..#11.9Aa a a    a a a #100%.  // (bat1I| (AI) | RSSI1      
+ 4|.       a a a    a a a #100%.  // (     | (AI) | RSSI2                            
+ 5|.       a a a    a a a                                     
+ 6|.       a a a rr a a a        // (AI) | reticle | (AI)     
+ 7|.       a a a @@ a a a        // (AI) | wpt arrow | (AI)   
+ 8|.       a a a123ma a a        // (AI) | dist to wpt | (AI) 
+ 9|. #XX   a a aL90 a a a        // n sats |                              
+10|..mmmmmammamammmmamammammmmm.. // line used by menu
+11|..N60.12345 E024.123     15k.. // GPS coords and speed 
+12|..............................
+
+NOTE: AI collides with battery if current sensor enabled.
+      This will cause some flicker on extreme attitudes.
+
+NOTE: AI collides with menuline.
+      This should not cause problems as menu is only usable while
+      not armed.
